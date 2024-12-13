@@ -1,0 +1,63 @@
+.Homepage-main {
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    height: 97vh; 
+    margin: 0;
+}
+
+.loginbox {
+    background-color: beige;
+    height: 350px;
+    width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    display:flex;
+    justify-content: center;
+}
+
+.loginbox label{
+    padding-top: 10px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.login-button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 50px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    background-color:aquamarine;
+}
+
+.login-button:hover {
+    cursor: pointer;
+    background-color: rgb(85, 85, 173);
+}
+
+.email-password {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-align: left;
+}
+
+.email-password::placeholder {
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+}
+  
+
