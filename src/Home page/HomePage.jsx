@@ -1,9 +1,10 @@
 import React from 'react'
+import TopBar from './Top Bar/TopBar'
 
 export default function HomePage() {
   return (
     <>
-        <h1>HomePage</h1>
+    <TopBar/>
     </>
   )
 }
