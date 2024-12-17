@@ -1,4 +1,75 @@
 .topbar-main {
     background-color: lightblue;
     height: 100px;
+    display: flex;
+    align-items:center;
+    padding: 0 20px;
+}
+.topbar-name {
+    margin-left: 15px;
+    flex: 3;
+    color: blue;
+}
+
+.search-container{
+    position: relative;
+    /* flex:3 */
+}
+
+.topbar-search {
+    outline: none;
+    height: 30px;
+    width: 300px;
+    /* width: 100%; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-dropdown {
+    position: absolute;
+    top:40px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    /* z-index: 10; */
+}
+
+.search-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  .search-dropdown li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .search-dropdown li:hover {
+    background-color: #f0f0f0;
+  }
+
+.topbar-profilebar {
+    display: flex;
+    flex: 3;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+.profile-name {
+    font-size: 18px;
+    font-family: Georgia, serif;
+}
+
+.profileImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
