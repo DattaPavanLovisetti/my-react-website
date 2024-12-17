@@ -1,11 +1,11 @@
 import React from 'react'
 import TopBar from './Top Bar/TopBar'
+import "./HomePage.css"
 
 export default function HomePage() {
   return (
-    <>
-    <TopBar/>
-        {/* <h1>HomePage</h1> */}
-    </>
+    <div className='Homepage-main'>
+      <TopBar/>
+    </div>
   )
 }
