@@ -39,7 +39,7 @@ const users = [
   { email: "test@gmail.com", password: "password" },
   { email: "admin@gmail.com", password: "admin123" },
   { email: "user@gmail.com", password: "userpass" },
-  { email: "pavan@gmail.com", password: "pavan123" },
+  { email: "pavan@gmail.com", password: "ilogedin" },
 ];
 
 return new Promise ((resolve)=> {
