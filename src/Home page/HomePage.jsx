@@ -1,6 +1,6 @@
 import React from 'react'
 import TopBar from './Top Bar/TopBar'
-import "./HomePage.css"
+import "./Homepage.css"
 import LeftSideBar from './Left Side Bar/LeftSideBar'
 import RightSideBar from './Right Side Bar/RightSideBar'
 import Feed from './Feed/Feed'
