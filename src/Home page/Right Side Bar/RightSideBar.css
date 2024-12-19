@@ -1,3 +1,5 @@
 .rightsidebar-main {
     flex: 3;
+    overflow-y: auto;
+    max-height: 100%;
 }

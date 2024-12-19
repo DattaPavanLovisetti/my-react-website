@@ -4,7 +4,7 @@ import "./Feed.css"
 export default function Feed() {
   return (
     <div className='feed-main'>
-      Feed
+      Welcome Home
     </div>
   )
 }

@@ -1,3 +1,31 @@
 .leftsidebar-main {
-    flex: 3;
+    flex: 1.5; 
+    overflow-y: auto;
+    max-height: 100%;
+    padding-right: 5px;
+    overflow-x: hidden;
+}
+
+.leftsidebar-icons {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.LeftIconName {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.LeftIcon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.leftsidebar-icons:hover{
+    background-color: #f0f0f0;
+    width: 100%;
+    border-radius: 10px;
 }
