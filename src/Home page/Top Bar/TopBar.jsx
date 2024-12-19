@@ -23,7 +23,7 @@ export default function TopBar() {
       alt='Profile'
       className='profileImage'
       />
-    } return <AccountCircleIcon   className='profile-icons'/>
+    } return <AccountCircleIcon className='profile-icons'/>
     }
   
   return (
