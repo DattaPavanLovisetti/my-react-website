@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [passwordVisibility, setPasswordVisibility] = useState(false)
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisibility((prev)=>!prev)
+  }
 
   const navigate = useNavigate();
 
@@ -71,17 +77,24 @@ export default function LoginPage() {
         ></input>
 
         <label htmlFor="password"> Password : </label>
+        {/* <div className="password-container"> */}
         <input
           value={password}
           onChange={handlePasswordChange}
           className="email-password"
-          type="password"
+          // type="password"
+          type={passwordVisibility ? "text" : "password"}
           id="password"
           placeholder="Enter Password"
         ></input>
+        <div className="password-toggle-icon" onClick={togglePasswordVisibility}>
+          {passwordVisibility ? <VisibilityOff /> : <Visibility />}
+        </div>
+        {/* </div> */}
 
         {error && <div>{error}</div>}
-        <button className="login-button" type="sumbit">
+
+        <button className="login-button" type="submit">
           Login
         </button>
       </form>

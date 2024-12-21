@@ -1,65 +1,91 @@
-import React , {useState} from 'react'
-import "./TopBar.css"
-import profileImage from '../../assets/profileImage.jpg';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MessageIcon from '@mui/icons-material/Message';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import React, { useState, useRef, useEffect } from "react";
+import "./TopBar.css";
+import profileImage from "../../assets/profileImage.jpg";
+import { TrendingUp } from "@mui/icons-material";
 
 export default function TopBar() {
-  const [dropDown, setDropDown] = useState(false);
+  const [searchDropDown, setSearchDropDown] = useState(false);
+  const [profileDropdown, setProfileDropdown] = useState(false);
+  const profileDropdownRef = useRef(null);
 
-  const handleSearchFocus =()=> {
-    setDropDown(true)
+  const toggleDropdown = () => {
+    setProfileDropdown((prev) => !prev);
   };
 
-  const handleSearchBlur = ()=> {
-    setTimeout(()=> setDropDown(false),200)
+  const handleSearchFocus = () => {
+    setSearchDropDown(true);
   };
 
-  const renderProfileImage = () => {
-    if (profileImage) {
-      return <img 
-      src={profileImage}  
-      alt='Profile'
-      className='profileImage'
-      />
-    } return <AccountCircleIcon className='profile-icons'/>
-    }
+  const handleSearchBlur = () => {
+    setTimeout(() => setSearchDropDown(false), 200);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) =>
+      profileDropdownRef.current &&
+      !profileDropdownRef.current.contains(event.target) &&
+      setProfileDropdown(false);
   
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+  
+
   return (
-    <div className='topbar-main'>
-        <h1 className='topbar-name'>Social Media</h1>
-        <div className='search-container'>
+    <div className="topbar-main">
+      <h1 className="topbar-name">Social Media</h1>
+      <div className="search-container">
         <input
-        className='topbar-search' 
-        placeholder='Search'
-        onFocus={handleSearchFocus}
-        onBlur={handleSearchBlur}
+          className="topbar-search"
+          placeholder="Search"
+          onFocus={handleSearchFocus}
+          onBlur={handleSearchBlur}
         />
 
-        {dropDown && (
-          <div className='search-dropdown'>
+        {searchDropDown && (
+          <div className="search-dropdown">
             <ul>
-              <li>Option 1</li>
-              <li>Option 2</li>
-              <li>Option 3</li>
-              <li>Option 4</li>
+              <div className="search-options">
+                <TrendingUp />
+                <li>Trending Topics</li>
+              </div>
+              <div className="search-options">
+                <TrendingUp />
+                <li>Trending Topics</li>
+              </div>
+              <div className="search-options">
+                <TrendingUp />
+                <li>Trending Topics</li>
+              </div>
+              <div className="search-options">
+                <TrendingUp />
+                <li>Trending Topics</li>
+              </div>
             </ul>
           </div>
         )}
-        </div>
-        <div className='topbar-profilebar'>
-          <div className='profile-icons'>
-            <MessageIcon />
-          </div>
-          <div  className='profile-icons'>
-            <NotificationsIcon/>
-          </div>
-          <div>
-           {renderProfileImage()}
-          </div>
+      </div>
+      <div className="topbar-profilebar" ref={profileDropdownRef}>
+        <div className="profile-dropdown-container">
+          <img
+            src={profileImage}
+            alt="Profile"
+            className="profileImage"
+            onClick={toggleDropdown}
+          />
 
+          {profileDropdown && (
+            <div className="profile-dropdown">
+            <ul>
+              <li>Profile</li>
+              <li>Help</li>
+              <li>Options</li>
+              <li>Log Out</li>
+            </ul>
+            </div>
+          )}
         </div>
+      </div>
     </div>
-  )
+  );
 }
