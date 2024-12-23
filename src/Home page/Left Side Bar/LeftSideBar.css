@@ -3,7 +3,7 @@
     overflow-y: auto;
     max-height: 100%;
     padding-right: 5px;
-    /* overflow-x: hidden; */
+    border-right:  1px solid black;
 }
 
 .leftsidebar-icons {
@@ -26,6 +26,5 @@
 
 .leftsidebar-icons:hover{
     background-color: #f0f0f0;
-    width: 100%;
     border-radius: 20px;
 }

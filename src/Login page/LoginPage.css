@@ -53,7 +53,6 @@
     outline: none;
     text-align: left;
     border-radius: 10px;
-    /* padding-right: 35px; */
 }
 
 .email-password::placeholder {
@@ -68,10 +67,7 @@
     top: 52%;
     transform: translateY(-50%);
     cursor: pointer;
-    /* color: #007bff;  */
     font-size: 20px; 
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
 }
 

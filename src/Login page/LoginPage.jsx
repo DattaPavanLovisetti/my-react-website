@@ -77,12 +77,10 @@ export default function LoginPage() {
         ></input>
 
         <label htmlFor="password"> Password : </label>
-        {/* <div className="password-container"> */}
         <input
           value={password}
           onChange={handlePasswordChange}
           className="email-password"
-          // type="password"
           type={passwordVisibility ? "text" : "password"}
           id="password"
           placeholder="Enter Password"
@@ -90,7 +88,6 @@ export default function LoginPage() {
         <div className="password-toggle-icon" onClick={togglePasswordVisibility}>
           {passwordVisibility ? <VisibilityOff /> : <Visibility />}
         </div>
-        {/* </div> */}
 
         {error && <div>{error}</div>}
 
