@@ -1,6 +1,32 @@
 .rightsidebar-main {
-    flex: 2;
-    overflow-y: auto;
-    max-height: 100%;
-    border-left: 1px solid black;
+  flex: 1.5;
+  overflow-y: auto;
+  max-height: 100%;
+  border-left: 1px solid black;
+}
+
+.rightbar-profiles {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 5px 0px 5px 20px;
+}
+
+.sidebar-profile {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.side-name {
+  padding-left: 10px;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.rightbar-profiles:hover {
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  color: blue;
 }
