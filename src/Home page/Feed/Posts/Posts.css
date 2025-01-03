@@ -1,0 +1,62 @@
+.Post {
+    height: 500px;
+    width: 500px;
+    background-color:beige;
+    /* margin-left: 230px; */
+    margin-top: 60px;
+    position: absolute;
+    /* top: 50%; */
+    left: 35%;
+    overflow: hidden;
+}
+
+.PostTop {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-bottom: 1px solid black;
+}
+
+.PostImage {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* margin-top: 10px; */
+}
+
+.custom-hr {
+    background-color:black;
+    color: black;
+    height: 0.9px;
+}
+
+.PostName {
+    padding-left: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+.PostTopRight {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.PostTopLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.PostFeedImage {
+    /* object-fit: cover; */
+    height: 415px;
+    width: 100%;
+}
+.PostCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
