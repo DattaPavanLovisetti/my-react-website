@@ -2,10 +2,8 @@
     height: 500px;
     width: 500px;
     background-color:beige;
-    /* margin-left: 230px; */
     margin-top: 60px;
     position: absolute;
-    /* top: 50%; */
     left: 35%;
     overflow: hidden;
 }
@@ -15,6 +13,9 @@
     align-items: center;
     justify-content:space-between;
     border-bottom: 1px solid black;
+    height: 35px;
+    padding: 0;
+    margin: 0;
 }
 
 .PostImage {
@@ -22,7 +23,6 @@
     width: 30px;
     border-radius: 50%;
     cursor: pointer;
-    /* margin-top: 10px; */
 }
 
 .custom-hr {
@@ -51,12 +51,35 @@
 }
 
 .PostFeedImage {
-    /* object-fit: cover; */
-    height: 415px;
+    height: 430px;
     width: 100%;
 }
 .PostCenter {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.likecommentshare {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+.like {
+    display: flex;
+    align-items: center; 
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.like:hover {
+    color: blue;
+}
+
+.likeTitle {
+    padding-left: 3px;
+    font-size: 17px;
+    padding-right: 5px;
 }
